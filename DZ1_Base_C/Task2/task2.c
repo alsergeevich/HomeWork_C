@@ -1,7 +1,7 @@
 /*Вывести на экран текст "лесенкой"
 	 Let’s
-       go
-		to walk
+            go
+	     to walk
 */
 
 #include <stdio.h>
