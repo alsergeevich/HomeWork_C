@@ -1,3 +1,8 @@
+/*
+Определить уравнение прямой по координатам двух точек.
+Уравнение вида y=k*x+b
+*/
+
 #include <stdio.h>
 
 void equation_of_a_line(int x1, int y1, int x2, int y2) {

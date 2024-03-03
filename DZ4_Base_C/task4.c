@@ -1,3 +1,6 @@
+//Напечатать сумму максимума и минимума.
+
+
 #include <stdio.h>
 
 int min(int a, int b, int c, int d, int e);
