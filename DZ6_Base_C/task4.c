@@ -1,0 +1,34 @@
+/*
+Факториал
+Составить функцию вычисления N!. Использовать ее при вычислении факториала
+int factorial(int n)
+
+Данные на входе: 		Целое положительное число не больше 20 
+Данные на выходе: 	    Целое положительное число 
+*/
+
+#include <stdio.h>
+
+int factorial(int n);
+
+int main(void) {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", factorial(n));
+
+}
+
+int factorial(int n) {
+    if(n == 0) {
+        return 0;
+    }
+    if(n == 1) {
+        return 1;
+    }
+    int fact = 1;
+    for(int i = 2; i <= n; ++i) {
+        fact *= i;
+    }
+    return fact;
+    
+}
