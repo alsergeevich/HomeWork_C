@@ -12,5 +12,5 @@ int main(void) {
     int result = 0;
     scanf("%d%d%d", &a, &b, &c);
     result = a + b + c;
-    printf("%d + %d + %d = %d\n", a, b, c, result);
+    printf("%d+%d+%d=%d\n", a, b, c, result);
 }

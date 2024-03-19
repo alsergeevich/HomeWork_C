@@ -15,7 +15,7 @@ int main(void) {
     printf("    %s\n", "***");
     printf("   %s\n", "*****");
     printf("  %s\n", "*******");
-    printf("   %s\n", "HH HH");
+    printf("   %s\n", "HHOHH");
     printf("   %s\n", "ZZZZZ");
 
 }

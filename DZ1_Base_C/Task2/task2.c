@@ -1,5 +1,5 @@
 /*Вывести на экран текст "лесенкой"
-	 Let’s
+	 Let's
             go
 	     to walk
 */
@@ -8,7 +8,7 @@
 
 int main(void) {
 
-    printf("     %s\n", "Let`s");
+    printf("     %s\n", "Let's");
     printf("       %s\n", "go");
-    printf("        %s\n", "to walk");
+    printf("         %s\n", "to walk");
 }
