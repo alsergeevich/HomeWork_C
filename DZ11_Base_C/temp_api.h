@@ -13,9 +13,7 @@ typedef struct
 
 } temperatureData_t;
 
-float monthlyAverageTemperature(temperatureData_t arraySensors[], int size, uint8_t month);
-int minTemperatureCurrentMonth(temperatureData_t arraySensors[], int size, uint8_t month);
-int maxTemperatureCurrentMonth(temperatureData_t arraySensors[], int size, uint8_t month);
-float averageAnnualTemperature(temperatureData_t arraySensors[], int size);
-int minimumTemperatureForTheYear(temperatureData_t arraySensors[], int size);
-int maximumTemperatureForTheYear(temperatureData_t arraySensors[], int size); 
+void calculateMonthlyStatistics(temperatureData_t arraySensors[], int numRecords);                              //статистика по месяцам
+void calculateMonthlyStatisticsForMonth(const temperatureData_t arraySensors[], int numRecords, uint8_t month); //статистика по конкретному месяцу
+void calculateYearlyStatistics(const temperatureData_t arraySensors[], int numRecords);                         //статистика за год
+
