@@ -38,3 +38,9 @@ DZ5_Base_C/task7
 DZ6_Base_C/task5
 DZ10_Base_C/input.txt
 DZ10_Base_C/output.txt
+kursovaya/main.c
+kursovaya/Makefile
+kursovaya/temp_api.c
+kursovaya/temp_api.h
+kursovaya/temperature_big.csv
+kursovaya/temperature_small.csv
