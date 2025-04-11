@@ -82,6 +82,7 @@ async fn main() -> Result<(), Error>{
     delay(2).await;
 
     // Отправляем GET запрос и обрабатываем ответ
+    //сначала написал функцию под POST, а потом ее решил под все запросы адаптировать, но возникла заморочка с обработкой ошибки поэтому пришлось для запросов без тела вставлять заглушку в виде пустой структуры
     let get_response = send_response(&PostBody { device: Device { applicationId: "".to_string(), description: "".to_string(), devEui: "".to_string(), deviceProfileId: "".to_string(), isDisabled: false, joinEui: "".to_string(), name: "".to_string(), skipFcntCheck: false } }, &client, Request::GET, AUTH_TOKEN).await?;
     check_response(get_response, Request::GET).await;
     delay(2).await;
@@ -99,7 +100,7 @@ async fn main() -> Result<(), Error>{
     check_response(put_response, Request::GET).await;
     delay(2).await;
 
-    // Удаляем устройства через DELETE-запрос
+    
     // Удаляем устройства через DELETE-запрос
     for device in &vec_devices {
         let delete_url = format!("https://chirpstack-api.iotserv.ru/api/devices/{}", device.device.devEui);
@@ -133,7 +134,7 @@ async fn main() -> Result<(), Error>{
     Ok(())
 }
 
-// функция создания устройства POST /api/devices
+// функция создания устройства POST
 fn create_device(num: u32) -> PostBody {
     let dev_name = "device_ZAS-021_".to_string() + &num.to_string();
     let dev_eui = "00112".to_string() + &num.to_string() + "33FFAA1101".to_string().as_str();
